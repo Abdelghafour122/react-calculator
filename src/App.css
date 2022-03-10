@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  /* THEME ONE */
+  /* BACKGROUNDS */
+  /* main background */
+  --vd-d-blue: hsl(222, 26%, 31%);
+  /* toggle / keypad background */
+  --vd-d-bluee: hsl(223, 31%, 20%);
+  /* screen background */
+  --vd-d-blueee: hsl(224, 36%, 15%);
+
+  /* KEYS */
+  /* key background */
+  --dd-blue: hsl(225, 21%, 49%);
+  /* key shadow */
+  --d-d-blue: hsl(224, 28%, 35%);
+  /* key background, toggle */
+  --red: hsl(6, 63%, 50%);
+  /* key shadow */
+  --d-red: hsl(6, 70%, 34%);
+  /* key background */
+  --l-g-orange: hsl(30, 25%, 89%);
+  /* key shadow */
+  --g-orange: hsl(28, 16%, 65%);
+
+  /* TEXT */
+  --vd-gblue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0, 100%);
+
+  /* THEME TWO */
+  /* BACKGROUNDS */
+  /* main background */
+  --l-gray: hsl(0, 0%, 90%);
+  /* toggle / keypad background */
+  --g-red: hsl(0, 5%, 81%);
+  /* screen background */
+  --v-lgray: hsl(0, 0%, 93%);
+
+  /* KEYS */
+  /* key background */
+  --d-mcyan: hsl(185, 42%, 37%);
+  /* key shadow */
+  --v-dcyan: hsl(185, 58%, 25%);
+  /* key background, toggle */
+  --orange: hsl(25, 98%, 40%);
+  /* key shadow */
+  --d-orange: hsl(25, 99%, 27%);
+  /* key background */
+  --l-gyellow: hsl(45, 7%, 89%);
+  /* key shadow */
+  --d-gorange: hsl(35, 11%, 61%);
+
+  /* TEXT */
+  --vd-gyellow: hsl(60, 10%, 19%);
+  /* --white: hsl(0, 0, 100%); */
+
+  /* THEME THREE */
+  /* BACKGROUNDS */
+  /* main background */
+  --vd-violet: hsl(268, 75%, 9%);
+  /* toggle background, keypad background, screen background */
+  --vd-violett: hsl(268, 71%, 12%);
+
+  /* KEYS */
+  /* key background */
+  --dviolet: hsl(281, 89%, 26%);
+  /* key shadow */
+  --v-magenta: hsl(285, 91%, 52%);
+  /* key background, toggle */
+  --p-cyan: hsl(176, 100%, 44%);
+  /* key shadow */
+  --s-cyan: hsl(177, 92%, 70%);
+  /* key background */
+  --vd-violet: hsl(268, 47%, 21%);
+  /* key shadow */
+  --d-magenta: hsl(290, 70%, 36%);
+
+  /* TEXT */
+  --l-yellow: hsl(52, 100%, 62%);
+  --vd-blue: hsl(198, 20%, 13%);
+  /* --white: hsl(0, 0, 100%); */
+
+  --reg-fs: 32px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.blue-theme {
+  --background-main: var(--vd-d-blue);
+  --background-toggle-keyboard: var(--vd-d-bluee);
+  --background-screen: var(--vd-d-blueee);
+
+  --key-toggle-color: var(--red);
+  --spec-key-color: var(--dd-blue);
+  --spec-key-shadow: var(--d-d-blue);
+
+  --normal-key-color: var(--l-g-orange);
+  --normal-key-shadow: var(--g-orange);
+
+  --spec-keys-color: var(--white);
+  --equal-button-color: var(--white);
+  --normal-keys-color: var(--vd-gblue);
+  --result-color: var(--white);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.white-theme {
+  --background-main: var(--l-gray);
+  --background-toggle-keyboard: var(--g-red);
+  --background-screen: var(--v-lgray);
+
+  --key-toggle-color: var(--d-mcyan);
+  --spec-key-color: var(--d-mcyan);
+  --spec-key-shadow: var(--v-dcyan);
+
+  --normal-key-color: var(--l-gyellow);
+  --normal-key-shadow: var(--d-gorange);
+
+  --spec-keys-color: var(--vd-gyellow);
+  --equal-button-color: var(--vd-gyellow);
+  --normal-keys-color: var(--vd-gyellow);
+  --result-color: var(--vd-gyellow);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.violet-theme {
+  --background-main: var(--vd-violet);
+  --background-toggle-keyboard: var(--vd-violett);
+  --background-screen: var(--vd-violett);
+
+  --key-toggle-color: var(--p-cyan);
+  --spec-key-color: var(--dviolet);
+  --spec-key-shadow: var(--v-magenta);
+
+  --normal-key-color: var(--vd-violet);
+  --normal-key-shadow: var(--d-magenta);
+
+  --spec-keys-color: var(--l-yellow);
+  --equal-button-color: var(--vd-blue);
+  --normal-keys-color: var(--white);
+  --result-color: var(--l-yellow);
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  box-sizing: border-box;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+body {
+  font-family: "Spartan";
 }
