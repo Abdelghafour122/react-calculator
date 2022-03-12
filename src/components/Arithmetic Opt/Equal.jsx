@@ -1,7 +1,7 @@
 import React from "react";
 
 const Equal = () => {
-  return <div>=</div>;
+  return <div id="equal">=</div>;
 };
 
 export default Equal;

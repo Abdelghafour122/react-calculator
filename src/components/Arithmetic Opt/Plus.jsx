@@ -1,7 +1,7 @@
 import React from "react";
 
 const Plus = () => {
-  return <div>+</div>;
+  return <div className="normal">+</div>;
 };
 
 export default Plus;
