@@ -4,81 +4,81 @@
   /* THEME ONE */
   /* BACKGROUNDS */
   /* main background */
-  --vd-d-blue: hsl(222, 26%, 31%);
+  --vd-d-blue: #3a4764;
   /* toggle / keypad background */
-  --vd-d-bluee: hsl(223, 31%, 20%);
+  --vd-d-bluee: #232c43;
   /* screen background */
-  --vd-d-blueee: hsl(224, 36%, 15%);
+  --vd-d-blueee: #182034;
 
   /* KEYS */
   /* key background */
-  --dd-blue: hsl(225, 21%, 49%);
+  --dd-blue: #637097;
   /* key shadow */
-  --d-d-blue: hsl(224, 28%, 35%);
+  --d-d-blue: #404e72;
   /* key background, toggle */
-  --red: hsl(6, 63%, 50%);
+  --red: #d03f2f;
   /* key shadow */
-  --d-red: hsl(6, 70%, 34%);
+  --d-red: #93261a;
   /* key background */
-  --l-g-orange: hsl(30, 25%, 89%);
+  --l-g-orange: #eae3dc;
   /* key shadow */
-  --g-orange: hsl(28, 16%, 65%);
+  --g-orange: #b4a597;
 
   /* TEXT */
-  --vd-gblue: hsl(221, 14%, 31%);
-  --white: hsl(0, 0, 100%);
+  --vd-gblue: #444b5a;
+  --white-text: #ffffff;
 
   /* THEME TWO */
   /* BACKGROUNDS */
   /* main background */
-  --l-gray: hsl(0, 0%, 90%);
+  --l-gray: #e6e6e6;
   /* toggle / keypad background */
-  --g-red: hsl(0, 5%, 81%);
+  --g-red: #d1cccc;
   /* screen background */
-  --v-lgray: hsl(0, 0%, 93%);
+  --v-lgray: #ededed;
 
   /* KEYS */
   /* key background */
-  --d-mcyan: hsl(185, 42%, 37%);
+  --d-mcyan: #377f86;
   /* key shadow */
-  --v-dcyan: hsl(185, 58%, 25%);
+  --v-dcyan: #1b5f65;
   /* key background, toggle */
-  --orange: hsl(25, 98%, 40%);
+  --orange: #ca5502;
   /* key shadow */
-  --d-orange: hsl(25, 99%, 27%);
+  --d-orange: #893901;
   /* key background */
-  --l-gyellow: hsl(45, 7%, 89%);
+  --l-gyellow: #e5e4e1;
   /* key shadow */
-  --d-gorange: hsl(35, 11%, 61%);
+  --d-gorange: #a69d91;
 
   /* TEXT */
-  --vd-gyellow: hsl(60, 10%, 19%);
+  --vd-gyellow: #35352c;
   /* --white: hsl(0, 0, 100%); */
 
   /* THEME THREE */
   /* BACKGROUNDS */
   /* main background */
-  --vd-violet: hsl(268, 75%, 9%);
+  --vd-violet: #160628;
   /* toggle background, keypad background, screen background */
-  --vd-violett: hsl(268, 71%, 12%);
+  --vd-violett: #1d0934;
 
   /* KEYS */
   /* key background */
-  --dviolet: hsl(281, 89%, 26%);
+  --dviolet: #58077d;
   /* key shadow */
-  --v-magenta: hsl(285, 91%, 52%);
+  --v-magenta: #bc15f4;
   /* key background, toggle */
-  --p-cyan: hsl(176, 100%, 44%);
+  --p-cyan: #00e0d1;
   /* key shadow */
-  --s-cyan: hsl(177, 92%, 70%);
+  --s-cyan: #6cf9f2;
   /* key background */
-  --vd-violet: hsl(268, 47%, 21%);
+  --vd-violet: #341c4f;
   /* key shadow */
-  --d-magenta: hsl(290, 70%, 36%);
+  --d-magenta: #871c9c;
 
   /* TEXT */
-  --l-yellow: hsl(52, 100%, 62%);
-  --vd-blue: hsl(198, 20%, 13%);
+  --l-yellow: #ffe53d;
+  --vd-blue: #1b2428;
   /* --white: hsl(0, 0, 100%); */
 
   --reg-fs: 32px;
@@ -96,10 +96,10 @@
   --normal-key-color: var(--l-g-orange);
   --normal-key-shadow: var(--g-orange);
 
-  --spec-keys-color: var(--white);
-  --equal-button-color: var(--white);
+  --spec-keys-color: var(--white-text);
+  --equal-button-color: var(--white-text);
   --normal-keys-color: var(--vd-gblue);
-  --result-color: var(--white);
+  --result-color: var(--white-text);
 }
 
 .white-theme {
@@ -144,4 +144,40 @@
 
 body {
   font-family: "Spartan";
+  background-color: var(--background-main);
+}
+
+.core {
+  margin: 70px auto;
+  width: 543px;
+}
+
+.core .head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.core .head span {
+  color: var(--result-color);
+}
+.core .head span:first-of-type {
+  font-size: var(--reg-fs);
+}
+
+.core .result-screen {
+  color: var(--result-color);
+  padding: 45px;
+  text-align: right;
+  font-size: var(--reg-fs);
+  background-color: var(--background-screen);
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.core .keys-cont {
+  background-color: var(--background-toggle-keyboard);
+  padding: 33px;
+  border-radius: 10px;
 }
