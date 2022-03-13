@@ -1,7 +1,7 @@
 import React from "react";
 
-const ResultScreen = () => {
-  return <div className="result-screen">the result</div>;
+const ResultScreen = ({ onPut }) => {
+  return <div className="result-screen">{onPut}</div>;
 };
 
 export default ResultScreen;

@@ -3,11 +3,11 @@ import Head from "./Head";
 import KeysContainer from "./KeysContainer";
 import ResultScreen from "./ResultScreen";
 
-const Core = () => {
+const Core = ({ onPut }) => {
   return (
     <div className="core">
       <Head />
-      <ResultScreen />
+      <ResultScreen onPut={onPut} />
       <KeysContainer />
     </div>
   );
