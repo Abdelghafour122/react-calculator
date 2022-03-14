@@ -1,7 +1,15 @@
 import React from "react";
+import { ACTIONS } from "./Core";
 
-const Digit = ({ val }) => {
-  return <div className="normal">{val}</div>;
+const Digit = ({ val, dis }) => {
+  return (
+    <div
+      className="normal"
+      onClick={() => dis({ type: ACTIONS.ADD_DIGIT, payload: { val } })}
+    >
+      {val}
+    </div>
+  );
 };
 
 export default Digit;

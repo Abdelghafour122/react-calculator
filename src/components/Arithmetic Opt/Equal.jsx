@@ -1,7 +1,17 @@
 import React from "react";
+import { ACTIONS } from "../Core";
 
-const Equal = () => {
-  return <div id="equal">=</div>;
+const Equal = ({ dis }) => {
+  return (
+    <div
+      id="equal"
+      onClick={() => {
+        dis({ type: ACTIONS.EVALUATE });
+      }}
+    >
+      =
+    </div>
+  );
 };
 
 export default Equal;

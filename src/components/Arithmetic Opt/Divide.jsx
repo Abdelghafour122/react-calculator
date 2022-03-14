@@ -1,7 +1,16 @@
 import React from "react";
-
-const Divide = () => {
-  return <div className="normal">/</div>;
+import { ACTIONS } from "../Core";
+const Divide = ({ dis }) => {
+  return (
+    <div
+      className="normal"
+      onClick={() =>
+        dis({ type: ACTIONS.CHOOSE_OPERATION, payload: { val: "/" } })
+      }
+    >
+      /
+    </div>
+  );
 };
 
 export default Divide;

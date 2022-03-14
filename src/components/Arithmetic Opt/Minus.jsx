@@ -1,7 +1,16 @@
 import React from "react";
-
-const Minus = () => {
-  return <div className="normal">-</div>;
+import { ACTIONS } from "../Core";
+const Minus = ({ dis }) => {
+  return (
+    <div
+      className="normal"
+      onClick={() =>
+        dis({ type: ACTIONS.CHOOSE_OPERATION, payload: { val: "-" } })
+      }
+    >
+      -
+    </div>
+  );
 };
 
 export default Minus;

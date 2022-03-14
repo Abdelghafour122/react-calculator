@@ -1,10 +1,12 @@
 import React from "react";
 
-const ResultScreen = ({ onPut }) => {
+const ResultScreen = ({ curOp, preOp, op }) => {
   return (
     <div className="result-screen">
-      <div className="prev-operand">1234</div>
-      <div className="curr-operand">{onPut}</div>
+      <div className="prev-operand">
+        {preOp} {op}{" "}
+      </div>
+      <div className="curr-operand">{curOp} </div>
     </div>
   );
 };
