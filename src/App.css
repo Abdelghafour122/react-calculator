@@ -149,6 +149,7 @@ body {
   font-family: "Spartan";
   background-color: var(--background-main);
   transition: 0.5s;
+  margin: 0;
 }
 
 .core {
@@ -215,13 +216,26 @@ body {
 
 .core .result-screen {
   color: var(--result-color);
-  padding: 45px;
+  padding: 35px;
   text-align: right;
   font-size: var(--reg-fs);
   background-color: var(--background-screen);
   border-radius: 10px;
   margin-bottom: 30px;
+  min-height: 10rem;
+  height: auto;
   transition: 0.3s;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.core .result-screen .prev-operand {
+  font-size: 14px;
 }
 
 .core .keys-cont {
