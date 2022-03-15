@@ -6,9 +6,7 @@ const Dot = ({ dis }) => {
     <div
       id="dot"
       className="normal"
-      onClick={() =>
-        dis({ type: ACTIONS.CHOOSE_OPERATION, payload: { val: "." } })
-      }
+      onClick={() => dis({ type: ACTIONS.ADD_DIGIT, payload: { val: "." } })}
     >
       .
     </div>

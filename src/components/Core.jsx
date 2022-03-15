@@ -108,6 +108,16 @@ function evaluate({ previousOperand, currentOperand, operation }) {
   return result.toString();
 }
 
+const INTEGER_FORMATTER = Intl.NumberFormat("en-us", {
+  maximumFractionDigits: 0,
+});
+function formatOperand(operand) {
+  if (!operand) return;
+  const [integer, decimal] = operand.toString().split(".");
+  if (!decimal) return INTEGER_FORMATTER.format(integer);
+  return `${INTEGER_FORMATTER.format(integer)}.${decimal}`;
+}
+
 const Core = () => {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
@@ -120,6 +130,7 @@ const Core = () => {
         curOp={currentOperand}
         preOp={previousOperand}
         op={operation}
+        onFormat={formatOperand}
       />
       <KeysContainer dispatch={dispatch} />
     </div>
