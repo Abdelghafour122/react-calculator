@@ -5,7 +5,7 @@ const ResultScreen = ({ curOp, preOp, op, onFormat }) => {
     <div className="result-screen">
       <div className="prev-operand">
         {onFormat(preOp)}
-        {op}{" "}
+        {op}
       </div>
       <div className="curr-operand">{onFormat(curOp)} </div>
     </div>
