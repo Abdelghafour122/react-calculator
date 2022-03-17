@@ -25,8 +25,8 @@ const Head = () => {
               : { justifyContent: `flex-${keyPosition}` }
           }
         >
-          <div id="mark"></div>
-          <div id="num">
+          <span className="mark"></span>
+          <span className="num">
             <span
               id="blue"
               onClick={() => {
@@ -54,7 +54,7 @@ const Head = () => {
             >
               3
             </span>
-          </div>
+          </span>
         </span>
       </span>
     </div>
