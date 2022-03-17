@@ -81,7 +81,7 @@
   --vd-blue: #1b2428;
   /* --white: hsl(0, 0, 100%); */
 
-  --reg-fs: 32px;
+  --reg-fs: 2rem;
 }
 
 .blue-theme {
@@ -153,15 +153,20 @@ body {
 }
 
 .core {
-  margin: 40px auto;
-  width: 543px;
+  margin: 2.5rem auto;
+  width: 33.9375rem;
+}
+@media (max-width: 47.9375rem) {
+  .core {
+    width: 29rem;
+  }
 }
 
 .core .head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 1.875rem 0;
 }
 
 .core .head span {
@@ -171,29 +176,29 @@ body {
   font-size: var(--reg-fs);
 }
 
-.core .head #toggler {
+.core .head .toggler {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.core .head #toggler span:first-of-type {
+.core .head .toggler span:first-of-type {
   font-size: unset;
   text-transform: uppercase;
 }
-.core .head #mark-holder {
-  width: 60px;
+.core .head .mark-holder {
+  width: 3.75rem;
   padding: 3px;
   background-color: var(--background-toggle-keyboard);
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  margin-left: 30px;
-  border-radius: 100px;
+  margin-left: 1.875rem;
+  border-radius: 6.25rem;
   position: relative;
   transition: 0.3s;
 }
-.core .head #mark-holder #num {
+.core .head .mark-holder #num {
   position: absolute;
   bottom: calc(100% + 8px);
   left: 0;
@@ -202,13 +207,13 @@ body {
   align-items: center;
   justify-content: space-around;
 }
-.core .head #mark-holder #num span {
+.core .head .mark-holder #num span {
   cursor: pointer;
 }
 
-.core .head #mark-holder #mark {
-  height: 20px;
-  width: 20px;
+.core .head .mark-holder #mark {
+  height: 1.25rem;
+  width: 1.25rem;
   border-radius: 50%;
   background-color: var(--key-toggle-bgcolor);
   transition: 0.3s;
@@ -216,12 +221,12 @@ body {
 
 .core .result-screen {
   color: var(--result-color);
-  padding: 35px;
+  padding: 2.1875rem;
   text-align: right;
   font-size: var(--reg-fs);
   background-color: var(--background-screen);
-  border-radius: 10px;
-  margin-bottom: 30px;
+  border-radius: 0.625rem;
+  margin-bottom: 1.875rem;
   min-height: 10rem;
   height: auto;
   transition: 0.3s;
@@ -235,26 +240,39 @@ body {
 }
 
 .core .result-screen .prev-operand {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .core .keys-cont {
   background-color: var(--background-toggle-keyboard);
-  padding: 33px;
-  border-radius: 10px;
+  padding: 2rem;
+  border-radius: 0.625rem;
   display: grid;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: repeat(5, 50px);
-  gap: 25px;
+  grid-template-columns: repeat(4, 6.25rem);
+  grid-template-rows: repeat(5, 3.125rem);
+  gap: 1.5625rem;
   transition: 0.3s;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 47.9375rem) {
+  .core .keys-cont {
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(5, 4rem);
+  }
 }
 
 .core .keys-cont > * {
   text-align: center;
-  line-height: 55px;
+  line-height: 3.4375rem;
   border-radius: 7px;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s, background-color 0.3s;
+}
+@media (max-width: 47.9375rem) {
+  .core .keys-cont > * {
+    line-height: 4.4375rem;
+  }
 }
 
 .core .keys-cont .spec {
@@ -266,7 +284,7 @@ body {
 .core .keys-cont #reset {
   grid-column: 1/3;
 }
-.core .keys-cont #equal {
+.core .keys-cont .equal {
   grid-column: 3/5;
   background-color: var(--key-toggle-bgcolor);
   color: var(--equal-button-color);
@@ -280,15 +298,20 @@ body {
   font-size: var(--reg-fs);
 }
 
+.core .keys-cont > *:hover {
+  box-shadow: unset;
+  transform: translateY(3px);
+}
+
 .attribution {
   text-align: center;
   color: darkcyan;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .attribution a {
   color: royalblue;
   text-decoration: underline dotted;
-  padding-bottom: 7px;
-  font-size: 20px;
+  padding-bottom: 0.4375rem;
+  font-size: 1.25rem;
 }

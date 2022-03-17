@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 
 const Head = () => {
   const [keyPosition, setKeyPosition] = useState("start");
   const [theme, setTheme] = useState("blue");
 
-  document.body.classList.forEach((classs) => {
-    document.body.classList.remove(classs);
-  });
-  document.body.classList.add(`${theme}-theme`);
+  useEffect(() => {
+    document.body.classList.forEach((classs) => {
+      document.body.classList.remove(classs);
+    });
+    document.body.classList.add(`${theme}-theme`);
+  }, [theme]);
 
   return (
     <div className="head">
       <span>calc</span>
-      <span id="toggler">
+      <span className="toggler">
         <span>Theme</span>
         <span
-          id="mark-holder"
+          className="mark-holder"
           style={
             keyPosition === "center"
               ? { justifyContent: "center" }

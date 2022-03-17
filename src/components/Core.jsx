@@ -124,7 +124,7 @@ const Core = () => {
     {}
   );
   return (
-    <div className="core">
+    <main className="core">
       <Head />
       <ResultScreen
         curOp={currentOperand}
@@ -133,7 +133,7 @@ const Core = () => {
         onFormat={formatOperand}
       />
       <KeysContainer dispatch={dispatch} />
-    </div>
+    </main>
   );
 };
 

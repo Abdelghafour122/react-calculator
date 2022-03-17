@@ -4,7 +4,7 @@ import { ACTIONS } from "../Core";
 const Equal = ({ dis }) => {
   return (
     <div
-      id="equal"
+      className="equal"
       onClick={() => {
         dis({ type: ACTIONS.EVALUATE });
       }}
