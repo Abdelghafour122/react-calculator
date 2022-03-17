@@ -267,7 +267,7 @@ body {
   line-height: 3.4375rem;
   border-radius: 7px;
   cursor: pointer;
-  transition: color 0.3s, background-color 0.3s;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 }
 @media (max-width: 47.9375rem) {
   .core .keys-cont > * {
